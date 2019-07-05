@@ -1,0 +1,418 @@
+.pos .my-header-button {
+    border-left: 1px solid #292929;
+    border-right: 1px solid #292929;
+    color: #ddd;
+    cursor: pointer;
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: center;
+}
+.pos .buttonheader
+{
+	background :#393939 none repeat scroll 0 0;
+	height: 30px;
+	display: flex;
+}
+.pos .product .qty-tag {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    vertical-align: top;
+    color: white;
+    line-height: 13px;
+    background: #7f82ac;
+    padding: 2px 5px;
+    border-radius: 2px;
+	font-weight: bold;
+}
+.pos .product .qty-tag.not-available {
+    background: #d882ac;
+}
+
+.pos .table-products {
+	background: #f5f5f5;
+	border-collapse: separate;
+	box-shadow: inset 0 1px 0 #fff;
+	/*margin: 30px auto;*/
+	text-align: left;
+	font-family: "Lato";
+	font-size: 14px;
+    font-weight: bold;
+	width: 100%;
+	border: none;
+}	
+
+.pos .th-products {
+	background: #7f82ac;
+	border: none;
+	color: #fff;
+	padding: 10px 15px;
+	position: relative;
+}
+
+.pos .th-products:after {
+	content: '';
+	display: block;
+	height: 25%;
+	left: 0;
+	margin: 1px 0 0 0;
+	position: absolute;
+	top: 25%;
+	width: 100%;
+}
+
+.pos .td-products {
+	border: none;
+	padding: 10px 15px;
+	position: relative;
+	transition: all 300ms;
+}	
+
+.pos .tr-products {
+	background: url(http://jackrugile.com/images/misc/noise-diagonal.png);
+}
+
+.pos .product-selected {
+    background-color: #aaadce;
+    color: #FFF;
+}
+
+.pos .tbody-products {	
+	cursor: pointer;
+}
+
+
+.pos .mysearchbox2 {
+    right: 2px;
+    height: 100%;
+}
+.pos .mysearchbox2 input {
+    width: 400px;
+    border: 1px solid #cecbcb;
+    padding: 10px 20px;
+    padding-left: 38px;
+    margin: 6px;
+    background: url("/point_of_sale/static/src/css/../img/search.png") no-repeat scroll 10px center #FFFFFF;
+    background-color: white;
+    border-radius: 20px;
+    font-family: Lato;
+    font-size: 13px;
+}
+.pos .mysearchbox2 input:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 2px rgb(153, 153, 255) inset;
+    color: rgb(153, 153, 255);
+}
+.pos .my-search-clear-products {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 11px;
+    left: 11px;
+    cursor: pointer;
+}
+
+.pos .order-container{
+    position: absolute;
+    margin-top:32px;
+    bottom: 232px;
+    width:100%;
+    background: #F0EEEE;
+}
+
+.pos .divTableProducts
+{
+	height:77%;
+	overflow: auto;
+}
+.pos .header-button-style {
+    border-left: 1px solid #292929;
+    border-right: 1px solid #292929;
+    color: #ddd;
+    cursor: pointer;
+    float: right;
+    height: 48px;
+    line-height: 48px;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: center;
+}
+
+/* .pos .textfree-button
+{	
+ 	background: linear-gradient(#F0F0F0, #E2E2E2) repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    font-size: 16px;
+    font-weight: bold !important;
+    height: 28px;
+    margin-right: 4px !important;
+    margin-top: 2px !important;
+    padding-top: 3px;
+    width: 110px;
+}
+
+.pos .textfree-button:hover
+{
+	color:#ffffff!important;
+	background: linear-gradient(#9D9FC5, #7F82AC) repeat scroll 0 0 rgba(0, 0, 0, 0)!important;	
+} */
+
+.pos .category-name{
+	font-weight:bold;
+}
+
+/*.pos .summary .line
+{
+	float: left !important;
+	font-size: 40px;
+	color
+}
+
+.pos .order .summary .line.empty {
+    color: blue !important;
+    text-align: right;
+    font-weight:bold;
+}
+
+.pos .order .summary {
+    color: blue;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    text-align: right;
+    width: 100%;
+}
+*/
+.pos .product .product-img .price-tag
+{
+	font-weight:bold;
+	font-size: 15px;
+}
+.pos .product-name{
+	/* width:75% !important; */
+	font-size: 15px;
+}
+
+.pos .order-container{
+	bottom: 280px;
+}
+
+.pos #rightheader .header-button{
+	font-weight:bold;
+	font-size: 13px;
+}
+
+.pos .company-name {
+    text-align:center; 
+    font-size:18px; 
+    font-weight:bold;
+    margin:8px 0 8px 0;
+}
+
+.pos .ref-date {
+	text-align:center;
+	font-size: 11px;
+}
+
+.pos .pos-disc-font {
+    white-space: nowrap;
+    font-size:11.5px;
+    font-style: italic;
+}
+
+.pos .thanks-word {
+	text-align:center;
+	font-weight:bolder;
+	width:100%;
+	font-size:15px;
+	padding: 10px 0px;
+}
+
+.pos .pos-sale-ticket {
+    text-align: left;
+    width: 250px;
+    background-color: white;
+    margin: 0px;
+    padding: 10px 2px;
+    font-size: 11px;
+    display: inline-block;
+    font-family: "Inconsolata";
+    overflow: hidden;
+    border: 1px solid #000000;
+    border-radius: 6px;
+}
+.pos .pos-sale-ticket pre{
+    font-family: "Inconsolata";
+}
+.pos .pos-sale-ticket .emph{
+    font-size: 16px;
+    font-weight:bold;
+    margin:5px;
+}
+.pos .pos-sale-ticket table {
+    width: 100%;
+    border: 0;
+    table-layout: fixed;
+}
+.pos .pos-sale-ticket table td {
+    border: 0;
+    word-wrap: break-word;
+}
+
+@media print {
+    .pos .pos-sale-ticket{
+        text-align: left !important;
+        width: 250px !important;
+        background-color: white !important;
+        margin: 0px !important;
+        padding: 10px 2px !important;
+        font-size: 11px !important;
+        display: inline-block !important;
+        font-family: "Inconsolata";
+        overflow: hidden !important;
+        border: 1px solid #000000 !important;
+        border-radius: 6px !important;
+        height: 100% !important;
+    }
+    .pos .pos-sale-ticket pre{
+        font-family: "Inconsolata" !important;
+    }
+    .pos .pos-sale-ticket .emph{
+        font-size: 16px !important;
+        font-weight:bold !important;
+        margin:5px !important;
+    }
+    .pos .pos-sale-ticket table {
+        width: 100% !important;
+        border: 0 !important;
+        table-layout: fixed !important;
+    }
+    .pos .pos-sale-ticket table td {
+        border: 0 !important;
+        word-wrap: break-word !important;
+    }
+    
+    .pos .pos-disc-font {
+        white-space: nowrap !important;
+        font-size:11px !important;
+        font-style: italic !important;
+    }
+}
+.pos .all_qty {
+    background: url("/pos_custom/static/src/img/product.png") no-repeat scroll 10px center #FFFFFF;
+}
+
+
+.pos .table-qty {
+	background: #f5f5f5;
+	border-collapse: separate;
+	box-shadow: inset 0 1px 0 #fff;
+	/*margin: 30px auto;*/
+	text-align: left;
+	font-family: "Lato";
+	font-size: 14px;
+    font-weight: bold;
+	width: 485px;
+	border: none;
+}	
+
+.pos .th-qty {
+	background: #7f82ac;
+	border: none;
+	color: #fff;
+	padding: 10px 15px;
+	position: relative;
+}
+
+.pos .th-qty:after {
+	content: '';
+	display: block;
+	height: 25%;
+	left: 0;
+	margin: 1px 0 0 0;
+	position: absolute;
+	top: 25%;
+	width: 100%;
+}
+
+.pos .td-qty {
+	border: none;
+	padding: 10px 15px;
+	position: relative;
+	transition: all 300ms;
+}	
+
+.pos .tr-qty {
+	background: url(http://jackrugile.com/images/misc/noise-diagonal.png);
+}
+
+.pos .tbody-qty {	
+	cursor: pointer;
+}
+
+.pos .divTableWh
+{
+	height:477px;
+	overflow: auto;
+}
+.tax-free {
+    background-color: #F0EEEE;
+    border: medium none;
+    direction: rtl;
+    font-weight: bold;
+    height: 35px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    padding: 0;
+    width: 100%;
+}
+.taxfree-button {
+    color: #555555;
+    background-color: #F0EEEE !important;
+    display: block;
+    font-size: 14px !important;
+    font-weight: bold;
+    height: 35px;
+    margin: 0 -6px 4px -2px;
+    vertical-align: middle;
+    width: 100%;
+}
+.upper-button{
+	display: flex;
+	width: 95%;
+}
+.classic-taxfree{
+	display: table !important;
+}
+
+
+.pos .pos-sale-ticket {
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 1px 0 white, 0 3px 0 #c1b9d6, 0 8px 16px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    font-family: "Inconsolata";
+    margin: 20px;
+    padding: 15px 15px 30px;
+    text-align: left;
+    width: 300px;
+    border: none;
+}
+.point-of-sale .pos-receipt-container {
+    font-size: 0.75em;
+}
+
+.pos .small-font{
+    font-size: 12px !important;
+}
+
+#ticket-barcode, #ticket-barcode object {
+    width: 100% !important;
+}
+#ticket-barcode object {
+    height: 50px;
+}
+
+

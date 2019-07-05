@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+	
+   
+	<record model="ir.ui.view" id="view_pos_config_form">
+            <field name="name">pos.config.form.view</field>
+			<field name="model">pos.config</field>
+			<field name="inherit_id" ref="point_of_sale.pos_config_view_form" />
+            <field name="arch" type="xml">
+				<data>
+	                <div id="iface_invoicing" position="after">
+	                
+	                	<div class="col-xs-12 col-md-6 o_setting_box" id="receipt_address">
+                            <div class="o_setting_left_pane">
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="address" string="Address On Receipt"/>
+                                <div class="text-muted">
+                                    <field name="address" />
+                                </div>
+                            </div>
+                        </div>
+                        
+<!-- 						<div class="col-xs-12 col-md-6 o_setting_box"> -->
+<!--                             <div class="o_setting_left_pane"> -->
+<!--                             </div> -->
+<!--                             <div class="o_setting_right_pane"> -->
+<!--                                 <label for="logo" string="Receipt Logo"/> -->
+<!--                                 <div class="text-muted"> -->
+<!--                                    <field name="logo" /> -->
+<!--                                 </div> -->
+<!--                             </div> -->
+<!--                         </div> -->
+
+	                </div>
+	                
+
+                        
+                </data>
+            </field>
+        </record>
+        
+        
+        <record id="group_discount" model="res.groups">
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin')), (4, ref('base.user_demo'))]"/>
+    </record>
+
+	</data>
+</odoo>

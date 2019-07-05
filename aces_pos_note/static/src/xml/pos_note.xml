@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="AddNoteButton">
+        <span class="control-button" style="background-color: #7f82ac;color: #fff; font-size: 14px;">
+            <i class="fa fa-sticky-note" ></i>
+             Product Note
+        </span>
+    </t>
+
+    <t t-name="ProductNotePopupWidget">
+        <div class="modal-dialog">
+            <div class="popup popup-textinput">
+                <p class="title">Add Product Note</p>
+                <textarea id="textarea_note" rows="7" cols="30"></textarea>
+                <div class="footer">
+                    <div class="button confirm">
+                        Done
+                    </div>
+                    <div class="button cancel">
+                        Cancel 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+
+		<t t-extend="Orderline">
+				<t t-jquery='ul.info-list' t-operation='append'>
+					<t t-if="widget.pos.config.enable_product_note">
+						<div id='extra_comments' style='font-weight:bold; color:green;'>
+							<t t-esc="line.get_line_note()"/>
+						</div>
+					</t>
+				</t>
+			
+	
+		</t>
+		
+		
+
+<!-- 				<t t-extend="OrderWidget"> -->
+<!-- 					<t t-jquery=".summary .items" t-operation="after"> -->
+<!-- 						<div class='notes' style="padding-bottom: 10px; padding-left: 15px;padding-right: 15px;"><i><b style="font-weight: bold; color: #0075AC;font-size: 20px;">Note: <span class="value"> -->
+<!-- 					0.00€</span></b></i></div> -->
+<!-- 					</t> -->
+<!-- 				</t> -->
+	
+
+<!-- 				<t t-extend="OrderWidget"> -->
+<!-- 				 <t t-jquery='.summary' t-operation='after'> -->
+<!-- 					<t t-if="widget.pos.config.enable_order_note"> -->
+<!-- 						<div id='extra_order_comments' style='font-weight:bold; color:green;'> -->
+<!-- 						  order note here -->
+<!-- 						   <t t-esc="order.get_order_note()"/> -->
+<!-- 						</div>			 -->
+<!-- 					</t> -->
+<!-- 				</t> -->
+<!-- 			</t> -->
+	
+    
+       <t t-name="AddNote2Button">
+        <span class="control-button">
+            <i class="fa fa-sticky-note"></i>
+             Order Note
+        </span>
+    </t>
+
+    <t t-name="OrderNotePopupWidget">
+        <div class="modal-dialog">
+            <div class="popup popup-textinput">
+                <p class="title">Add Order Note</p>
+                <textarea id="order_note" rows="7" cols="30"></textarea>
+                <div class="footer">
+                    <div class="button confirm">
+                        Done
+                    </div>
+                    <div class="button cancel">
+                        Cancel 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+    
+
+
+    <t t-extend="PosTicket">
+        <t t-jquery="div.pos-sale-ticket" t-operation="append">
+
+			<t t-if="widget.pos.config.enable_order_note and widget.pos.config.is_ordernote_receipt">
+							<br/>
+								<t t-if="order.get_order_note()!=''">
+									
+										<tr>
+											<td>Note:</td>
+											<td class="pos-left-align">
+												<t t-esc="order.get_order_note()"/>
+											</td>
+											
+										
+													
+										</tr>
+								
+								</t>
+						</t>
+			
+			        </t>
+        <t t-jquery="table.receipt-orderlines td:first-child" t-operation="inner">
+            <t t-esc="orderline.get_product().display_name"/>
+            <t t-if="orderline.get_discount() > 0">
+                <div class="pos-disc-font">
+                    With a <t t-esc="orderline.get_discount()"/>% discount
+                </div>
+            </t>
+            <t t-if="orderline.get_line_note()">
+                <t t-esc="widget.pos.product_note"/>
+                <t t-if="widget.pos.product_note">
+                    <div class="pos-disc-font">
+                        <t t-esc="orderline.get_line_note()"/>
+                    </div>
+                </t>
+            </t>
+        </t> 
+    </t>
+
+	<t t-extend="XmlReceipt">
+		<t t-jquery="receipt" t-operation="append">
+		    <t t-if="receipt.order_note">
+		        <t t-if="widget.pos.order_note">
+		            <line>
+                        <left>Note: <t t-esc='receipt.order_note' /></left>
+                    </line>
+		        </t>
+            </t>
+		</t>
+		<t t-jquery="[t-if='simple']" t-operation="append">
+			<t t-if="line.line_note">
+                <t t-if="widget.pos.product_note">
+				    <line indent='1'><left><t t-esc='line.line_note' /></left></line>
+                </t>
+			</t>
+		</t>
+		<t t-jquery="[t-if='!simple']" t-operation="append">
+			<t t-if="line.line_note">
+			    <t t-if="widget.pos.product_note">
+		             <line indent='1'>
+		                 <left>
+		                     <div font='b'>
+		                         <t t-esc='line.line_note' />
+		                     </div>
+		                 </left>
+		             </line>
+			    </t>
+			</t>
+		</t>
+	</t>
+
+</templates>
