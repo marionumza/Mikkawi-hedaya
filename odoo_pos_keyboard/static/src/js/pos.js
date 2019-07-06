@@ -219,13 +219,13 @@ odoo.define('odoo_pos_keyboard.pos', function (require) {
 //			'f9':120,
 //          }
           
-          for (var i = 0; i < paymentMethods.length; i++) {
+        /*  for (var i = 0; i < paymentMethods.length; i++) {
         	
             // map Index to a key
             keyToPaymentIndex.set(keys[i], i);
             appendKeyToElement(keys[i], paymentMethods[i])
           
-          }
+          }*/
         },
         selectPayMethod: function(el) {
           el.addClass("selected")

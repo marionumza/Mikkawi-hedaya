@@ -48,9 +48,9 @@
 								<tr>
 									<th class="th-products" style="width:135px;min-width:135px;">Barcode</th>
 									<th class="th-products" style="width:50%;">Name</th>
-									<th class="th-products" style="width:30px;">Price</th>
-									<th class="th-products" style="width:30px;">Qty</th>
-									<th class="th-products" style="width:30px;">Availablility_all_WHs</th>
+									<th class="pos-center-align" style="width:30px;">Price</th>
+									<th class="pos-center-align" style="width:30px;">Qty</th>
+									<th class="pos-center-align" style="width:30px;">Availablility_all_WHs</th>
 									<!-- <th class="th-products" style="padding: 10px 0;width: 41px">Disc</th>
 									<th class="th-products" style="width:30px;">Disc</th> -->
 <!-- 									<th class="th-products" style="width:30px;padding: 10px 0;">Availability</th> -->
@@ -87,13 +87,13 @@
        		<td class="td-products" style="width:50%;">
 				<t t-esc="widget.model.display_name"/>         
        		</td>
-       		<td class="td-products" style="width:30px;">
+       		<td class="pos-left-align" style="width:30px;">
 				<t t-esc="widget.model.list_price.toFixed(2)"/>
        		</td>
-       		<td class="td-products" style="width:30px;">
+       		<td class="pos-center-align" style="width:30px;">
 				<t t-esc="widget.model.qty_available"/> 
        		</td>
-       		<td>
+       		<td class="pos-center-align">
        	    <t t-esc="widget.model.warehouse_quantity"/> 
        		</td>
 <!--        		<td id="qty_warehouses"> -->

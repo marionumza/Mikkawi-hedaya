@@ -13,9 +13,9 @@
 
 	<!-- CreateSalesOrderButtonWidget -->
 	<t t-name="CreateSalesOrderButtonWidget" name="Create Sales Order Button Widget">
-		<div class="control-button button confirm" id="create_sales_order" style="background-color: #7f82ac; color: #fff;font-size: 14px;">
-			<i class="fa fa-shopping-cart"></i> Create Sales Order 
-		</div>
+<!-- 		<div class="control-button button confirm" id="create_sales_order" style="background-color: #7f82ac; color: #fff;font-size: 14px;"> -->
+<!-- 			<i class="fa fa-shopping-cart"></i> Create Sales Order  -->
+<!-- 		</div> -->
 	</t>
 
 	<t t-name="SaleOrderButtonWidget" name="Sale Orders">
