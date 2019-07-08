@@ -146,12 +146,10 @@
         </t>
         
 <!--          edit by hedaia to remove coloum credit from client -->
-        <t t-jquery="table.client-list tr" t-operation="append">
+       <!--  <t t-jquery="table.client-list tr" t-operation="append">
             <th id="client-list-debt">Debt</th>
             <th id="client-list-credit">Credit</th>
-        </t>
-        
-        
+        </t> -->
         <t t-jquery="table.client-list" t-operation="after">
             <table id="debt_history" class='client-list oe_hidden'>
                 <thead>
@@ -175,14 +173,14 @@
     <!--          edit by hedaia to remove coloum credit values from client -->
     
 
-    <t t-extend="ClientLine">
+   <!--  <t t-extend="ClientLine">
         <t t-jquery="tr.client-line" t-operation="append">
             <td t-attf-class="client-debt #{((widget.pos.config.debt_type == 'debt' and partner.debt lt 0) or (widget.pos.config.debt_type == 'credit' and partner.debt lt 0)) ? 'negative' : ''} #{((widget.pos.config.debt_type == 'debt' and partner.debt gt 0) or (widget.pos.config.debt_type == 'credit' and partner.debt gt 0)) ? 'positive' : ''}">
                 <t t-if="widget.pos.config.debt_type == 'debt'" t-esc='widget.format_currency(partner.debt)'/>
                 <t t-if="widget.pos.config.debt_type == 'credit'" t-esc='widget.format_currency(-partner.debt)'/>
             </td>
         </t>
-    </t>
+    </t> -->
 
     <t t-name="DebtHistoryLine">
         <tr>
