@@ -177,14 +177,16 @@
 
 	</t>
 
+
+<!-- edit to remove view ordet -->
 	<!-- ClientLineWidget -->
-	<t t-extend="ClientLine">
-		<t t-jquery="tr.client-line" t-operation="append">
-			<td>
-				<button class="selected-client-orders" t-att-id='partner.id'> <i class="fa fa-university"></i> View Orders </button>
-			</td>
-		</t>
-	</t>
+<!-- 	<t t-extend="ClientLine"> -->
+<!-- 		<t t-jquery="tr.client-line" t-operation="append"> -->
+<!-- 			<td> -->
+<!-- 				<button class="selected-client-orders" t-att-id='partner.id'> <i class="fa fa-university"></i> View Orders </button> -->
+<!-- 			</td> -->
+<!-- 		</t> -->
+<!-- 	</t> -->
 
 
 	<!-- OrderDetails -->
