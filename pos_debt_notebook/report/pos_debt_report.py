@@ -29,9 +29,11 @@ class PosDebtReport(models.Model):
 
     state = fields.Selection([('open', 'Open'), ('confirm', 'Validated')], readonly=True)
     credit_product = fields.Boolean(string='Journal Credit Product', help="Record is registered as Purchasing credit product", readonly=True)
-    balance = fields.Monetary('Balance', help="Negative value for purchases without money (debt). Positive for credit payments (prepament or payments for debts).", readonly=True)
+    balance = fields.Monetary('Credit Payment', help="Negative value for purchases without money (debt). Positive for credit payments (prepament or payments for debts).", readonly=True)
     product_list = fields.Text('Product List', readonly=True)
-    amount_total = fields.Monetary('Amount total', help="Amount Total", readonly=True)
+    amount_total = fields.Monetary('Sale Order Amount', help="Sale Order Amount", readonly=True)
+
+    
 
 
 
@@ -99,6 +101,7 @@ class PosDebtReport(models.Model):
                     o.product_list as product_list,
                     st.journal_id as journal_id,
                     o.amount_total as amount_total
+
 
                 FROM account_bank_statement_line as st_line
                     LEFT JOIN account_bank_statement st ON (st.id=st_line.statement_id)
@@ -181,6 +184,7 @@ class PosDebtReport(models.Model):
 
                     pt.credit_product as journal_id,
                     0 as amount_total
+                   
 
                 FROM account_invoice_line as inv_line
                     LEFT JOIN product_product pp ON (pp.id=inv_line.product_id)
@@ -216,6 +220,7 @@ class PosDebtReport(models.Model):
                     record.note as product_list,
                     record.journal_id as journal_id,
                     0 as amount_total
+                    
 
                 FROM pos_credit_update as record
                 WHERE
@@ -247,6 +252,7 @@ class PosDebtReport(models.Model):
 
                     pay.journal_id as journal_id,
                     0 as amount_total
+                    
 
                 FROM account_payment as pay
                     LEFT JOIN account_journal journal ON (journal.id=pay.journal_id)

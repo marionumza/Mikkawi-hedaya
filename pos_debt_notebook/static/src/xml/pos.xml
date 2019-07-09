@@ -42,8 +42,40 @@
         </t>
     </t>
 
+<!-- edit to add mobile in add customer -->
+	<t t-extend="ClientDetailsEdit">
+	        <t t-jquery=".client-details-right" t-operation="after">
+	         <div class='client-detail'>
+                        <span class='label'>Mobile</span>
+                         <input class='detail client-mobile'  name='mobile'    type='tel'      t-att-value='partner.mobile || ""'></input>
+                    </div>
+	        
+	        
+	         </t>
+	        </t>
+	
+	
+
+
+
     <t t-extend="ClientDetails">
         <t t-jquery=".client-details-right" t-operation="after">
+        
+        <!--         edit by hedaia add mobile field -->
+        
+          <div class='client-detail'>
+                         
+      
+                        <span class='label'>Mobile</span>
+                        <t t-if='partner.mobile'>
+                            <span class='detail client-mobile'><t t-esc='partner.mobile' /></span>
+                        </t>
+                        <t t-if='!partner.mobile'>
+                            <span class='detail client-mobile empty'>N/A</span>
+                        </t>
+                        </div>
+        
+        
             <div class="client-details-debt">
                 <!--<div t-if="widget.pos.config.debt_type == 'debt'" class="client-detail">-->
                 <!--<span class='label'>Debts:</span>-->
@@ -69,6 +101,18 @@
                 </div>
             </div>
         </t>
+        
+
+        
+        
+        
+
+
+
+
+
+        
+        
         <t t-jquery=".client-details-box" t-operation="after">
             <div id="loading_history" class="o_spinner oe_hidden"><i class="fa fa-spinner fa-spin fa-4"/></div>
         </t>
@@ -163,7 +207,7 @@
                         <th>Journal</th>
                         <th>Journal Balance</th>
                         <th>Total Balance</th>
-                        <th>Total Amount</th>                        
+                        <th>Sale Order Amount</th>                        
                     </tr>
                 </thead>
                 <tbody id='debt_history_contents'>

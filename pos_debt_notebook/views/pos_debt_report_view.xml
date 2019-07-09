@@ -13,7 +13,7 @@
                 <pivot string="Debts / Credits Analysis">
                     <field name="partner_id" type="row"/>
                     <field name="date" interval="month" type="col"/>
-                    <field name="balance" type="measure"/>
+                    <field name="balance" string="balance" type="measure"/>
                 </pivot>
             </field>
         </record>
@@ -24,7 +24,7 @@
             <field name="arch" type="xml">
                 <graph string="Point of Sale Analysis">
                     <field name="partner_id" type="row"/>
-                    <field name="balance" type="measure"/>
+                    <field name="balance" string="balance" type="measure"/>
                 </graph>
             </field>
         </record>

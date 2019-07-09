@@ -1,5 +1,10 @@
 eclipse.preferences.version=1
 encoding//aar_pos_ticket/__manifest__.py=utf-8
+encoding//aspl_pos_kitchen_screen_ee/controllers/__init__.py=utf-8
+encoding//aspl_pos_kitchen_screen_ee/controllers/main.py=utf-8
+encoding//aspl_pos_kitchen_screen_ee/models/__init__.py=utf-8
+encoding//aspl_pos_kitchen_screen_ee/models/kitchen_screen.py=utf-8
+encoding//aspl_pos_kitchen_screen_ee/models/res_users.py=utf-8
 encoding//odoo_pos_keyboard/__manifest__.py=utf-8
 encoding//point_of_sale_logo/__manifest__.py=utf-8
 encoding//pos_order_notes/__manifest__.py=utf-8
